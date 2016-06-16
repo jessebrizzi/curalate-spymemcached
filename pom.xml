@@ -12,11 +12,11 @@
     -->
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>net.spy</groupId>
-    <artifactId>spymemcached</artifactId>
-    <version>2.999.999-SNAPSHOT</version> <!-- not used -->
+    <groupId>com.curalate</groupId>
+    <artifactId>curalate-spymemcached</artifactId>
+    <version>2.999.999</version> <!-- not used -->
 
-    <name>Spymemcached</name>
+    <name>curalate-spymemcached</name>
     <description>A client library for memcached.</description>
     <url>http://www.couchbase.org/code/couchbase/java</url>
 
@@ -28,14 +28,13 @@
         </license>
     </licenses>
     <scm>
-        <url>https://github.com/couchbase/spymemcached</url>
-        <connection>
-            scm:git:git://github.com/couchbase/spymemcached.git
-        </connection>
+        <url>https://github.com/curalate/curalate-spymemcached</url>
+        <connection>scm:git:https://${github.deployToken}@github.com/curalate/curalate-spymemcached.git</connection>
+        <developerConnection>scm:git:https://${github.deployToken}@github.com/curalate/curalate-spymemcached.git</developerConnection>
     </scm>
     <developers>
         <developer>
-            <id>net.spy.spymemcached</id>
+            <id>com.curalate.spy.spymemcached</id>
             <name>The Spymemcached Project Contributors</name>
             <url>https://code.google.com/p/spymemcached/</url>
             <organization>Couchbase, Inc.</organization>

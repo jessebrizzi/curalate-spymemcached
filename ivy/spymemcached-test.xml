@@ -26,7 +26,7 @@
     <license name="Apache 2.0"/>
     <ivyauthor name="Couchbase" url="http://github.com/dustin/java-memcached-client" />
     <description>
-        Spymemcached Tests
+        curalate-spymemcached Tests
     </description>
   </info>
   <configurations defaultconfmapping="default">
