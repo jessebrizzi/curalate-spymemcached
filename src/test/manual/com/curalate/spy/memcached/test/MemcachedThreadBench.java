@@ -20,15 +20,15 @@
  * IN THE SOFTWARE.
  */
 
-package net.spy.memcached.test;
+package com.curalate.spy.memcached.test;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import junit.framework.TestCase;
-import net.spy.memcached.AddrUtil;
-import net.spy.memcached.DefaultConnectionFactory;
-import net.spy.memcached.MemcachedClient;
+import com.curalate.spy.memcached.AddrUtil;
+import com.curalate.spy.memcached.DefaultConnectionFactory;
+import com.curalate.spy.memcached.MemcachedClient;
 
 /**
  * Adaptation of http://code.google.com/p/spcached/wiki/benchmarktool.

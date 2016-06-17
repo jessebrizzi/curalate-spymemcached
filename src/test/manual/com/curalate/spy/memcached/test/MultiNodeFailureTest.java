@@ -20,10 +20,10 @@
  * IN THE SOFTWARE.
  */
 
-package net.spy.memcached.test;
+package com.curalate.spy.memcached.test;
 
-import net.spy.memcached.AddrUtil;
-import net.spy.memcached.MemcachedClient;
+import com.curalate.spy.memcached.AddrUtil;
+import com.curalate.spy.memcached.MemcachedClient;
 
 /**
  * This is an attempt to reproduce a problem where a server fails during a

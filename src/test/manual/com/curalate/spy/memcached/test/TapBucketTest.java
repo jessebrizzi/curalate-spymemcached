@@ -20,7 +20,7 @@
  * IN THE SOFTWARE.
  */
 
-package net.spy.memcached.test;
+package com.curalate.spy.memcached.test;
 
 import java.net.URI;
 import java.util.Arrays;
@@ -28,9 +28,9 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
-import net.spy.memcached.MembaseClient;
-import net.spy.memcached.TapClient;
-import net.spy.memcached.tapmessage.ResponseMessage;
+import com.curalate.spy.memcached.MembaseClient;
+import com.curalate.spy.memcached.TapClient;
+import com.curalate.spy.memcached.tapmessage.ResponseMessage;
 
 /**
  * In order to successfully run this test you must create a Membase bucket on

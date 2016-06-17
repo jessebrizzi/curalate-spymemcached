@@ -20,7 +20,7 @@
  * IN THE SOFTWARE.
  */
 
-package net.spy.memcached.test;
+package com.curalate.spy.memcached.test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,12 +28,12 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.Random;
 
-import net.spy.memcached.AddrUtil;
-import net.spy.memcached.ConnectionFactoryBuilder;
-import net.spy.memcached.ConnectionFactoryBuilder.Protocol;
-import net.spy.memcached.MemcachedClient;
-import net.spy.memcached.compat.SpyObject;
-import net.spy.memcached.util.CacheLoader;
+import com.curalate.spy.memcached.AddrUtil;
+import com.curalate.spy.memcached.ConnectionFactoryBuilder;
+import com.curalate.spy.memcached.ConnectionFactoryBuilder.Protocol;
+import com.curalate.spy.memcached.MemcachedClient;
+import com.curalate.spy.memcached.compat.SpyObject;
+import com.curalate.spy.memcached.util.CacheLoader;
 
 /**
  * Test a multiget that's sufficiently large as to get data before the

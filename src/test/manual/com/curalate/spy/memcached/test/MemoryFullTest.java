@@ -20,15 +20,15 @@
  * IN THE SOFTWARE.
  */
 
-package net.spy.memcached.test;
+package com.curalate.spy.memcached.test;
 
 import java.util.Random;
 import java.util.concurrent.ExecutionException;
 
-import net.spy.memcached.AddrUtil;
-import net.spy.memcached.MemcachedClient;
-import net.spy.memcached.ops.OperationErrorType;
-import net.spy.memcached.ops.OperationException;
+import com.curalate.spy.memcached.AddrUtil;
+import com.curalate.spy.memcached.MemcachedClient;
+import com.curalate.spy.memcached.ops.OperationErrorType;
+import com.curalate.spy.memcached.ops.OperationException;
 
 /**
  * Verify what happens when the memory is full on the server.

@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2009-2011 Couchbase, Inc.
+ * Copyright (C) 2006-2009 Dustin Sallings
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,34 +20,34 @@
  * IN THE SOFTWARE.
  */
 
-package net.spy.memcached.test;
+package com.curalate.spy.memcached.test;
 
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-
-import net.spy.memcached.AddrUtil;
-import net.spy.memcached.ConnectionFactoryBuilder;
-import net.spy.memcached.ConnectionFactoryBuilder.Protocol;
-import net.spy.memcached.MemcachedClient;
-import net.spy.memcached.compat.SpyObject;
-import net.spy.memcached.util.CacheLoader;
+import com.curalate.spy.memcached.AddrUtil;
+import com.curalate.spy.memcached.ConnectionFactoryBuilder;
+import com.curalate.spy.memcached.ConnectionFactoryBuilder.Protocol;
+import com.curalate.spy.memcached.MemcachedClient;
+import com.curalate.spy.memcached.auth.AuthDescriptor;
+import com.curalate.spy.memcached.compat.SpyObject;
 
 /**
- * Loader performance test.
+ * Authentication functional test.
  */
-public class LoaderTest extends SpyObject implements Runnable {
+public class AuthTest extends SpyObject implements Runnable {
 
-  private final int count;
+  private final String username;
+  private final String password;
   private MemcachedClient client;
 
-  public LoaderTest(int c) {
-    count = c;
+  public AuthTest(String u, String p) {
+    username = u;
+    password = p;
   }
 
   public void init() throws Exception {
     client = new MemcachedClient(new ConnectionFactoryBuilder()
-        .setProtocol(Protocol.BINARY).setOpQueueMaxBlockTime(1000).build(),
-        AddrUtil.getAddresses("localhost:11211"));
+        .setProtocol(Protocol.BINARY)
+        .setAuthDescriptor(AuthDescriptor.typical(username, password))
+        .build(), AddrUtil.getAddresses("localhost:11212"));
   }
 
   public void shutdown() throws Exception {
@@ -55,23 +55,17 @@ public class LoaderTest extends SpyObject implements Runnable {
   }
 
   public void run() {
-    CacheLoader cl = new CacheLoader(client);
-
-    Future<Boolean> f = null;
-    for (int i = 0; i < count; i++) {
-      f = cl.push("k" + i, "some value");
+    System.out.println("Available mechs:  " + client.listSaslMechanisms());
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
     }
-    if (f != null) {
-      try {
-        f.get(1, TimeUnit.MINUTES);
-      } catch (Exception e) {
-        e.printStackTrace();
-      }
-    }
+    client.getVersions();
   }
 
   public static void main(String[] a) throws Exception {
-    LoaderTest lt = new LoaderTest(1000000);
+    AuthTest lt = new AuthTest("testuser", "testpass");
     lt.init();
     long start = System.currentTimeMillis();
     try {

@@ -20,7 +20,7 @@
  * IN THE SOFTWARE.
  */
 
-package net.spy.memcached.test;
+package com.curalate.spy.memcached.test;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -30,13 +30,13 @@ import java.util.logging.ConsoleHandler;
 import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import net.spy.memcached.AddrUtil;
-import net.spy.memcached.ConnectionFactoryBuilder;
-import net.spy.memcached.ConnectionFactoryBuilder.Protocol;
-import net.spy.memcached.MemcachedClient;
-import net.spy.memcached.OperationTimeoutException;
-import net.spy.memcached.auth.AuthDescriptor;
-import net.spy.memcached.auth.PlainCallbackHandler;
+import com.curalate.spy.memcached.AddrUtil;
+import com.curalate.spy.memcached.ConnectionFactoryBuilder;
+import com.curalate.spy.memcached.ConnectionFactoryBuilder.Protocol;
+import com.curalate.spy.memcached.MemcachedClient;
+import com.curalate.spy.memcached.OperationTimeoutException;
+import com.curalate.spy.memcached.auth.AuthDescriptor;
+import com.curalate.spy.memcached.auth.PlainCallbackHandler;
 import static org.junit.Assert.*;
 
 /**

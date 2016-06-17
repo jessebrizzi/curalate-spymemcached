@@ -20,17 +20,17 @@
  * IN THE SOFTWARE.
  */
 
-package net.spy.memcached.test;
+package com.curalate.spy.memcached.test;
 
 import java.net.SocketAddress;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
-import net.spy.memcached.AddrUtil;
-import net.spy.memcached.ConnectionObserver;
-import net.spy.memcached.DefaultConnectionFactory;
-import net.spy.memcached.MemcachedClient;
+import com.curalate.spy.memcached.AddrUtil;
+import com.curalate.spy.memcached.ConnectionObserver;
+import com.curalate.spy.memcached.DefaultConnectionFactory;
+import com.curalate.spy.memcached.MemcachedClient;
 
 /**
  * This expects a server on port 11212 that's somewhat unstable so it can report
