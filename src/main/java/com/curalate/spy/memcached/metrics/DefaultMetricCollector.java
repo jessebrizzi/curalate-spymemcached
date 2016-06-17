@@ -97,11 +97,11 @@ public final class DefaultMetricCollector extends AbstractMetricCollector {
    */
   private void initReporter() {
     String reporterType =
-      System.getProperty("net.spy.metrics.reporter.type", DEFAULT_REPORTER_TYPE);
+      System.getProperty("com.curalate.spy.metrics.reporter.type", DEFAULT_REPORTER_TYPE);
     String reporterInterval =
-      System.getProperty("net.spy.metrics.reporter.interval", DEFAULT_REPORTER_INTERVAL);
+      System.getProperty("com.curalate.spy.metrics.reporter.interval", DEFAULT_REPORTER_INTERVAL);
     String reporterDir =
-      System.getProperty("net.spy.metrics.reporter.outdir", DEFAULT_REPORTER_OUTDIR);
+      System.getProperty("com.curalate.spy.metrics.reporter.outdir", DEFAULT_REPORTER_OUTDIR);
 
     if(reporterType.equals("console")) {
       final ConsoleReporter reporter = ConsoleReporter.forRegistry(registry)

@@ -311,14 +311,14 @@ public class MemcachedConnection extends SpyThread implements ClusterConfigurati
     this.bufSize = bufSize;
     this.connectionFactory = f;
 
-    String verifyAlive = System.getProperty("net.spy.verifyAliveOnConnect");
+    String verifyAlive = System.getProperty("com.curalate.spy.verifyAliveOnConnect");
     if(verifyAlive != null && verifyAlive.equals("true")) {
       verifyAliveOnConnect = true;
     } else {
       verifyAliveOnConnect = false;
     }
 
-    wakeupDelay = Integer.parseInt( System.getProperty("net.spy.wakeupDelay",
+    wakeupDelay = Integer.parseInt( System.getProperty("com.curalate.spy.wakeupDelay",
       Integer.toString(DEFAULT_WAKEUP_DELAY)));
 
     //This MemcachedConnection constructor is used in several places. 

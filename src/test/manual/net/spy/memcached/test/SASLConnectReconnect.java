@@ -95,7 +95,7 @@ public class SASLConnectReconnect {
     SASLConnectReconnect m =
         new SASLConnectReconnect(args[0], args[1], args[2]);
 
-    Logger.getLogger("net.spy.memcached").setLevel(Level.FINEST);
+    Logger.getLogger("com.curalate.spy.memcached").setLevel(Level.FINEST);
 
     // get the top Logger, create it if it doesn't exist, set to FINEST
     Logger topLogger = java.util.logging.Logger.getLogger("");

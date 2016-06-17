@@ -451,7 +451,7 @@ public class DefaultConnectionFactory extends SpyObject implements
 
   @Override
   public MetricType enableMetrics() {
-    String metricType = System.getProperty("net.spy.metrics.type");
+    String metricType = System.getProperty("com.curalate.spy.metrics.type");
     return metricType == null
       ? DEFAULT_METRIC_TYPE : MetricType.valueOf(metricType.toUpperCase());
   }
@@ -462,7 +462,7 @@ public class DefaultConnectionFactory extends SpyObject implements
       return metrics;
     }
 
-    String enableMetrics = System.getProperty("net.spy.metrics.enable");
+    String enableMetrics = System.getProperty("com.curalate.spy.metrics.enable");
     if (enableMetrics().equals(MetricType.OFF) || enableMetrics == "false") {
       getLogger().debug("Metric collection disabled.");
       metrics =  new NoopMetricCollector();

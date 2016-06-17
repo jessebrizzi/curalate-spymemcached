@@ -124,7 +124,7 @@ public final class LoggerFactory extends Object {
   @SuppressWarnings("unchecked")
   private void getConstructor() {
     Class<? extends Logger> c = DefaultLogger.class;
-    String className = System.getProperty("net.spy.log.LoggerImpl");
+    String className = System.getProperty("com.curalate.spy.log.LoggerImpl");
 
     if (className != null) {
       try {
@@ -132,13 +132,13 @@ public final class LoggerFactory extends Object {
       } catch (NoClassDefFoundError e) {
         System.err.println("Warning:  " + className
             + " not found while initializing"
-            + " net.spy.compat.log.LoggerFactory");
+            + " com.curalate.spy.compat.log.LoggerFactory");
         e.printStackTrace();
         c = DefaultLogger.class;
       } catch (ClassNotFoundException e) {
         System.err.println("Warning:  " + className
             + " not found while initializing"
-            + " net.spy.compat.log.LoggerFactory");
+            + " com.curalate.spy.compat.log.LoggerFactory");
         e.printStackTrace();
         c = DefaultLogger.class;
       }

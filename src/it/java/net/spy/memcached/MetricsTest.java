@@ -45,8 +45,8 @@ public class MetricsTest {
 
   @Test
   public void isDisabledByDefault() throws Exception {
-    System.clearProperty("net.spy.metrics.enable");
-    System.clearProperty("net.spy.metrics.type");
+    System.clearProperty("com.curalate.spy.metrics.enable");
+    System.clearProperty("com.curalate.spy.metrics.type");
 
     ConnectionFactory cf = new DefaultConnectionFactory();
     assertEquals(MetricType.OFF, cf.enableMetrics());
@@ -66,8 +66,8 @@ public class MetricsTest {
     assertEquals(MetricType.PERFORMANCE, cf.enableMetrics());
     assertTrue(cf.getMetricCollector() instanceof DefaultMetricCollector);
 
-    System.setProperty("net.spy.metrics.enable", "true");
-    System.setProperty("net.spy.metrics.type", "performance");
+    System.setProperty("com.curalate.spy.metrics.enable", "true");
+    System.setProperty("com.curalate.spy.metrics.type", "performance");
     cf = new ConnectionFactoryBuilder().build();
     assertEquals(MetricType.PERFORMANCE, cf.enableMetrics());
     assertTrue(cf.getMetricCollector() instanceof DefaultMetricCollector);
