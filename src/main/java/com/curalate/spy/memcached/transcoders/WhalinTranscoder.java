@@ -58,7 +58,7 @@ public class WhalinTranscoder extends BaseSerializingTranscoder implements
   /*
    * (non-Javadoc)
    *
-   * @see net.spy.memcached.Transcoder#decode(CachedData)
+   * @see com.curalate.spy.memcached.Transcoder#decode(CachedData)
    */
   public Object decode(CachedData d) {
     byte[] data = d.getData();

@@ -30,8 +30,8 @@ import java.util.concurrent.ConcurrentMap;
 /**
  * Factory to get logger instances.
  *
- * The system property <code>net.spy.log.LoggerImpl</code> should point
- * to an implementation of net.spy.compat.log.Logger to use.
+ * The system property <code>com.curalate.spy.log.LoggerImpl</code> should point
+ * to an implementation of com.curalate.spy.compat.log.Logger to use.
  *
  * <p>
  * Depending on how and where this was compiled, a sun logger (jdk 1.4) and/or

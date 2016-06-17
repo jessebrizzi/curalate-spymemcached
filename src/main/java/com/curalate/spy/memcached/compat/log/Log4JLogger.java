@@ -63,7 +63,7 @@ public class Log4JLogger extends AbstractLogger {
   /**
    * Wrapper around log4j.
    *
-   * @param level net.spy.compat.log.Level level.
+   * @param level com.curalate.spy.compat.log.Level level.
    * @param message object message
    * @param e optional throwable
    */

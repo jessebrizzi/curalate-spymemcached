@@ -35,9 +35,9 @@ import java.util.concurrent.TimeUnit;
  * The following system properies can be used to customize the behavior
  * of the collector during runtime:
  * <pre>
- * - net.spy.metrics.reporter.type = console (console/jmx/csv/slf4j)
- * - net.spy.metrics.reporter.interval = 30 (time interval to log)
- * - net.spy.metrics.reporter.outdir = ~/mydir (output dir for csv reporter)
+ * - com.curalate.spy.metrics.reporter.type = console (console/jmx/csv/slf4j)
+ * - com.curalate.spy.metrics.reporter.interval = 30 (time interval to log)
+ * - com.curalate.spy.metrics.reporter.outdir = ~/mydir (output dir for csv reporter)
  * </pre>
  */
 public final class DefaultMetricCollector extends AbstractMetricCollector {

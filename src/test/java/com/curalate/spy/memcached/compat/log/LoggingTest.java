@@ -83,7 +83,7 @@ public class LoggingTest extends TestCase {
    */
   public void testLog4j() {
     // Logger l=LoggerFactory.getLogger(getClass());
-    // assertEquals("net.spy.compat.log.Log4JLogger", l.getClass().getName());
+    // assertEquals("com.curalate.spy.compat.log.Log4JLogger", l.getClass().getName());
   }
 
   /**
